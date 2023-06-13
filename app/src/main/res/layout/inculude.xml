@@ -1,0 +1,55 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#DAD0E1">
+
+
+    <ImageView
+        android:id="@+id/backIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:paddingBottom="2dp"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarTextIV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarTextIV"
+        app:srcCompat="@drawable/backicon" />
+
+    <TextView
+        android:id="@+id/toolbarTextIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:text="Notification"
+        android:textColor="#4E4F4F"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profileIconIV"
+        app:layout_constraintStart_toEndOf="@+id/backIV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profileIconIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:src="@drawable/notificationicon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarTextIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarTextIV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
