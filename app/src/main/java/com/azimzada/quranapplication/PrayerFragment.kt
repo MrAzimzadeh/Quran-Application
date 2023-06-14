@@ -26,5 +26,6 @@ class PrayerFragment : Fragment(R.layout.fragment_prayer) {
             val date = "$day - $month - $year"
         })
 
+        binding.toolbar.toolbarTextIV.setText("Prayer")
     }
 }

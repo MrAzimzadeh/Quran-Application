@@ -1,215 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/prayer_page_bg"
     tools:context=".PrayerFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/calender_view_bacground_ziraddin"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.201"
-            tools:ignore="MissingConstraints" />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/calender_view_bacground_ziraddin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/prayerTimeTV"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/paryer_time_zireddin"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:layout_constraintVertical_bias="0.056">
+
 
         <LinearLayout
-            android:id="@+id/prayerTimeTV"
-            android:layout_width="350dp"
-            android:layout_height="130dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/paryer_time_zireddin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical"
-            android:padding="15dp"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/calendarView"
-            app:layout_constraintVertical_bias="0.056">
-
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:id="@+id/fajrTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Fajr"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:ignore="MissingConstraints" />
-
-                    <TextView
-                        android:id="@+id/fajrTimeTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="5.55am"
-                        android:textSize="16sp"
-                        tools:ignore="MissingConstraints" />
-                </LinearLayout>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/fajrTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                    android:text="Fajr"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
 
-                    <TextView
-                        android:id="@+id/ZuhrTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Zuhr "
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:ignore="MissingConstraints" />
-
-                    <TextView
-                        android:id="@+id/ZuhrTimeTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="1.05pm"
-                        android:textSize="16sp"
-                        tools:ignore="MissingConstraints" />
-                </LinearLayout>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/fajrTimeTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:id="@+id/AshrTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Ashr "
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:ignore="MissingConstraints" />
-
-                    <TextView
-                        android:id="@+id/AshrTimeTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="4.55pm"
-                        android:textSize="16sp"
-                        tools:ignore="MissingConstraints" />
-                </LinearLayout>
-
+                    android:layout_weight="1"
+                    android:text="5.55am"
+                    android:textSize="16sp"
+                    tools:ignore="MissingConstraints" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center">
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
 
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/ZuhrTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:text="Zuhr "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
 
-                    <TextView
-                        android:id="@+id/IshaTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="15dp"
-                        android:text="Isha "
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:ignore="MissingConstraints" />
-
-                    <TextView
-                        android:id="@+id/IshaTimeTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="4.55pm"
-                        android:textSize="16sp"
-                        tools:ignore="MissingConstraints" />
-                </LinearLayout>
-
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/ZuhrTimeTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:id="@+id/MagribTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="15dp"
-                        android:text="Magrib "
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:ignore="MissingConstraints" />
-
-                    <TextView
-                        android:id="@+id/MagribTimeTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="4.55pm"
-                        android:textSize="16sp"
-                        tools:ignore="MissingConstraints" />
-                </LinearLayout>
-
+                    android:layout_weight="1"
+                    android:text="1.05pm"
+                    android:textSize="16sp"
+                    tools:ignore="MissingConstraints" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/AshrTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ashr "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/AshrTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="4.55pm"
+                    android:textSize="16sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="350dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/direction_bg_zireddin"
-            android:paddingLeft="20dp"
-            android:paddingTop="20dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="20dp"
-            android:text="Direction"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:drawableRightCompat="@drawable/direction_icon_zireddin"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/prayerTimeTV"
-            app:layout_constraintVertical_bias="0.122"
-            tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/IshaTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:text="Isha "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/IshaTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="4.55pm"
+                    android:textSize="16sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/MagribTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:text="Magrib "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/MagribTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="4.55pm"
+                    android:textSize="16sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/direction_bg_zireddin"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:text="Direction"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:drawableRightCompat="@drawable/direction_icon_zireddin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prayerTimeTV"
+        app:layout_constraintVertical_bias="0.631"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
